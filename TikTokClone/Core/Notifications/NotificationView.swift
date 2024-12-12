@@ -9,7 +9,18 @@ import SwiftUI
 
 struct NotificationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView (showsIndicators: false) {
+                VStack(spacing: 20){
+                    ForEach(0 ..< 20) { notification in
+                        NotificationCell()
+                    }
+                }
+            }
+            .navigationTitle("Notifications")
+            .navigationBarTitleDisplayMode(.inline)
+            .padding(.top)
+        }
     }
 }
 

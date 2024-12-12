@@ -25,6 +25,20 @@ struct ProfileHeaderView: View {
                 UserStatView(value: 10,  title: "Likes")
             }
             .padding()
+            
+            Button {
+                
+            }label: {
+                Text("Edit Profile")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .frame(width: UIScreen.main.bounds.width - 40, height: 30)
+                    .foregroundStyle(.black)
+                    .background(Color(.systemGray5))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+            }
+            
+            Divider()
         }
     }
 }

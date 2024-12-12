@@ -10,25 +10,24 @@ import SwiftUI
 struct UserCell: View {
     var body: some View {
         HStack {
-            Image(systemName: "person")
+            Image(systemName: "person.circle.fill")
                 .resizable()
-                .frame(width: 36, height: 36)
-                .clipShape(Circle())
-                
-          //  Circle()
-             //   .frame(width: 48, height: 48)
-            
+                .frame(width: 48, height: 48)
+                .foregroundStyle(Color(.systemGray5))
+          
             VStack (alignment: .leading) {
                 Text("Username")
+                    .font(.subheadline)
                     .bold()
                 Text("Description")
+                    .font(.footnote)
             }
             Spacer()
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 
 #Preview {
-    ExploreCell()
+    UserCell()
 }
